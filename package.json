@@ -4,6 +4,9 @@
   "description": "see numeric timestamps in text as dates",
   "main": "index.js",
   "sideEffects": false,
+  "bin": {
+    "date-goggles": "./cli.js"
+  },
   "scripts": {
     "lint": "eslint $npm_package_config_lint",
     "lint:fix": "eslint $npm_package_config_lint",
