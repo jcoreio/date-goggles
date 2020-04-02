@@ -12,7 +12,7 @@
     "prettier:check": "prettier --list-different .babelrc.js *.json *.md *.ts '{src,test,demo}/**/*.{js,ts,tsx}'",
     "tsc": "tsc --noEmit",
     "tsc:watch": "npm run tsc -- --watch",
-    "clean": "rimraf es lib $(cd src; ls) *.js *.d.ts",
+    "clean": "rimraf es lib $(cd src; ls) *.d.ts",
     "build": "npm run clean && npm run build:types && npm run build:js",
     "build:types": "tsc --emitDeclarationOnly",
     "build:js": "babel src --out-dir es --extensions \".ts\" --source-maps inline && cross-env BABEL_ENV=es5 babel src --out-dir . --extensions \".ts\"",
